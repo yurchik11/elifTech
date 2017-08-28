@@ -143,7 +143,7 @@ app.put('/cars', function(req, res)// request - response
 {
     var car = req.body;
     console.log(car);
-    console.log(req.get('temp'));
+    console.log(car.name);
     db.get().collection('cars').updateOne(
         {_id:ObjectID(car._id)},
         {
